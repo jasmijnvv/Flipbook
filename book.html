@@ -1,0 +1,258 @@
+<!DOCTYPE html> 
+  <html> 
+ <head> 
+   <meta charset='UTF-8'> 
+   <title>Book Flip Demo</title> 
+  
+   <!-- Use prebuilt library --> 
+   <script src='https://unpkg.com/page-flip/dist/js/page-flip.browser.js'></script> 
+  
+   <style> 
+     #book { 
+       width: 400px; 
+       height: 600px; 
+       margin: 10px auto; 
+       margin-bottom: 40; 
+       flex-direction: column; 
+       align-items: center; 
+     } 
+     .page { 
+       background: rgb(232, 225, 208); 
+       border: 1px solid #ccc; 
+       display: flex; 
+       justify-content: center; 
+       align-items: center; 
+       font-size: 30px; 
+     } 
+     audio { 
+     color-scheme: light; 
+     width: 190px; 
+     height: 25px; 
+     } 
+     audio {margin-bottom: -30px;} 
+     h1 {text-align: center; 
+     margin-bottom: 5px;} 
+     h2 {text-align: center; 
+     margin-bottom: -0.25px;} 
+     p {text-align: left; 
+     margin-left: 15px; 
+     margin-top: 5px} 
+     div {text-align: center;} 
+  
+     .Opaopbed{ 
+       display: block; 
+       margin-left: auto; 
+       margin-right: auto; 
+       margin-bottom: auto; 
+     } 
+     .Opaopstoel{ 
+       display: block; 
+       margin-left: auto; 
+       margin-right: auto; 
+       margin-bottom: auto; 
+     } 
+     .ObesiOpa{ 
+       display: block; 
+       margin-left: auto; 
+       margin-right: auto; 
+       margin-bottom: auto; 
+     } 
+     .Opaopdieet{ 
+       display: block; 
+       margin-left: auto; 
+       margin-right: auto; 
+       margin-bottom: auto; 
+     }  
+     .Opaisfit{ 
+       display: block; 
+       margin-left: auto; 
+       margin-right: auto; 
+       margin-bottom: auto; 
+     } 
+ a { 
+   text-decoration: none; 
+   display: inline-block; 
+  
+   padding: 10px 26px;} 
+ a:hover { 
+   background-color: #ddd; 
+   color: black;} 
+ .vorige { 
+   background-color: #fdfdfd; 
+   border: 1px solid black; 
+   color: black; 
+   width: 5px; 
+   height: 20px; 
+   margin-top: 10px; 
+   margin-bottom: auto; 
+   } 
+ .volgende { 
+   background-color: #fe8002; 
+   border: 1px solid black; 
+   color: white; 
+   width: 5px; 
+   height: 20px; 
+   margin-top: 10px; 
+   margin-bottom: auto; 
+   } 
+   </style> 
+ </head> 
+  
+ <body> 
+ <div id='book'> 
+         <div class='page cover'> 
+         <h1>TITEL</h1> 
+         <img src='image' alt='Example image' width='300' class='Opaopbed'> 
+     </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2> Boos
+</h2> 
+     <p> 
+          Opa vond het dieet niet leuk. Hij wilde snoepjes en chips.
+
+     </p> 
+     <img src='Boos_image-0.png' width='180' class='Opaopstoel'> 
+     <p> 
+          Jasmijn
+
+    </p> 
+   </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2> Fit
+</h2> 
+     <p> 
+          Maar nu is hij niet meer Dikkiedik. Hij kan weer rennen zonder iedere 10 seconden een half uur uit te hijgen. 
+
+     </p> 
+     <img src='Fit_image-0.png' width='180' class='Opaopstoel'> 
+     <p> 
+          Jasmijn
+
+    </p> 
+   </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2> Geen foto
+</h2> 
+     <p> 
+          Dit verhaaltje zal geen foto bevatten. Dit verhaaltje gaat mijn code daarom niet leuk vinden. Succes computer en succes ik. 
+
+
+
+	     </p> 
+     <img src='' width='180' class='Opaopstoel'> 
+     <p> 
+          Jasmijn
+
+    </p> 
+   </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2> Langdradig
+</h2> 
+     <p> 
+          Hier begint het verhaal dat lang zal duren. Het gaat om een verhaal dat bestaat uit meer regels dan op één pagina past. De vraag is: gaat dit een probleem veroorzaken? Dames en heren, we gaan het meemaken. U zult als eerste getuige zijn van deze proef. Allereerst hebben      </p> 
+     <img src='' width='180' class='Opaopstoel'> 
+     <p> 
+             </p> 
+   </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2></h2> 
+     <p> 
+         we meer regels nodig. Dus die klets ik nu bij elkaar. Het is nu nog niet duidelijk hoeveel regels er eigenlijk op één pagina passen. Dit hangt misschien ook af van de foto die toegevoegd is aan de tekst. En het formaat van deze foto. Misschien hangt het ook af      </p> 
+     <img src='' width='180' class='Opaopstoel'> 
+     <p> 
+             </p> 
+   </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2></h2> 
+     <p> 
+         van het aantal enters in een verhaal. 
+
+Dat gaan we nu bekijken.
+
+Misschien nemen enters te veel ruimte in beslag.
+
+Maar alfa’s houden van enters.
+
+Dus de tool moet hier wel mee kunnen werken. 
+
+
+
+      </p> 
+     <img src='Langdradig_image-0.png' width='180' class='Opaopstoel'> 
+     <p> 
+          Jasmijn en Jeroen
+
+    </p> 
+   </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2> Opa de kat
+</h2> 
+     <p> 
+          Er was eens een kat genaamd Opa. Opa woonde in Almere. Maar niet voor lang meer. Hij ging wonen bij een nieuwe familie. Helemaal in Groningen.
+
+
+
+     </p> 
+     <img src='Opa de kat_image-0.png' width='180' class='Opaopstoel'> 
+     <p> 
+          Jasmijn
+
+    </p> 
+   </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2> Dieet
+</h2> 
+     <p> 
+          In Almere mocht hij ALLES eten wat hij wilde. Hij was daarom nogal dik. Zijn nieuwe familie noemde hem Dikkiedik. Hij moest op dieet.
+
+     </p> 
+     <img src='Opa op dieet_image-0.png' width='180' class='Opaopstoel'> 
+     <p> 
+          Jasmijn
+
+    </p> 
+   </div> 
+    <div class='page'> 
+      <audio src='audio/H1 Opa de kat.mp4' controls></audio> 
+     <h2>Einde</h2> 
+     <p> 
+              </p> 
+     <img src='' width='180' class='Opaopstoel'> 
+     <p> 
+             </p> 
+   </div> 
+  
+   <div class='controls'> 
+     <a onclick= 'previousPage()' href ='#' class='vorige'>&laquo;</a> 
+     <a onclick= 'nextPage()' href='#' class='volgende'>&raquo;</a> 
+   </div> 
+  
+ </div> 
+  
+ <script> 
+   const pageFlip = new St.PageFlip( 
+     document.getElementById('book'), 
+     { 
+       width: 500, 
+       height: 600, 
+       showCover: true 
+     } 
+   ); 
+  
+   pageFlip.loadFromHTML(document.querySelectorAll('.page')); 
+  
+   function nextPage() {pageFlip.flipNext()} 
+   function previousPage() {pageFlip.flipPrev()} 
+ </script> 
+  
+ </body> 
+ </html> 
+ 
