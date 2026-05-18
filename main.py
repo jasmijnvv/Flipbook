@@ -112,7 +112,7 @@ def extract_images(file_name: Path):
     return image_paths
 
 files_list = []
-directory = Path(r"C:\Users\Jasmijn\Documents\Dikkiedik")
+directory = Path(r"C:\Users\Jasmijn\Documents\Presentatieboek CALL")
 for file_path in directory.iterdir():
      if file_path.is_file():
         files_list.append(file_path.resolve())
@@ -153,6 +153,6 @@ for file in files_list:
         images.append("")
 
 
-html_file_path = "book.html"
+html_file_path = "index.html"
 create_html_file(html_file_path, titels, teksten, images, namen)
 
