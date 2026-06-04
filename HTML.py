@@ -7,7 +7,7 @@ def create_page_cover(book_name, image_path):
 
     return page_cover
 
-def create_page(chapter_name, text, image_path, naam):
+def create_page(chapter_name, text, image_path_per_file, naam):
   page = f" \
   <div class='page'> \n \
      <audio src='audio/H1 Opa de kat.mp4' controls></audio> \n \
@@ -15,11 +15,14 @@ def create_page(chapter_name, text, image_path, naam):
     <p> \n \
         {text} \
     </p> \n \
-    <img src='{image_path}' width='180' class='Opaopstoel'> \n \
-    <p> \n \
-        {naam}\
-    </p> \n \
-  </div> \n "
+    "
+  for image_path in image_path_per_file: 
+    image = f" \
+        <img src='{image_path}' width='180' class='Opaopstoel'> \n \
+        "
+    page += image   
+          
+  page += f"<p> \n {naam} </p> \n </div> \n"
 
   return page
 

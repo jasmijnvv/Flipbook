@@ -26,7 +26,7 @@ def create_html_file(file_path, titels, page_texts, image_paths, namen):
     text += HTML.doc_begin
 
     text += HTML.create_page_cover("TITEL", "image")
-    for titel, page_text, image_path, naam in zip (titels, page_texts, image_paths, namen):
+    for titel, page_text, image_path_per_file, naam in zip (titels, page_texts, image_paths, namen):
         split_text = page_text.split(" ")
         words_per_page = 50
         if len(split_text) > words_per_page:
@@ -39,9 +39,9 @@ def create_html_file(file_path, titels, page_texts, image_paths, namen):
                 elif pagina < aantal_paginas -1: 
                     text += HTML.create_page("", page_text_short, "", "")
                 elif pagina == aantal_paginas -1:
-                    text += HTML.create_page("", page_text_short, image_path, naam)
+                    text += HTML.create_page("", page_text_short, image_path_per_file, naam)
             continue
-        text += HTML.create_page(titel, page_text, image_path, naam)
+        text += HTML.create_page(titel, page_text, image_path_per_file, naam)
 
     text += HTML.create_page("Einde", "", "", "")
 
@@ -112,7 +112,7 @@ def extract_images(file_name: Path):
     return image_paths
 
 files_list = []
-directory = Path(r"C:\Users\Jasmijn\Documents\Presentatieboek CALL")
+directory = Path(r"C:\Users\Jasmijn\Documents\A1C")
 for file_path in directory.iterdir():
      if file_path.is_file():
         files_list.append(file_path.resolve())
@@ -131,7 +131,7 @@ for file in files_list:
 
     text = text.decode('utf-8')
 
-    titel = re.findall(r'(?<=Titel:)[^.]*(?=\n)', text)
+    titel = re.findall(r'(?<=Titel:)[^.]*(?=Tekst:)', text)
     tekst = re.findall(r'(?<=Tekst:)[\s\S]*?(?=Foto)', text)
     naam = re.findall(r'(?<=Naam:)[\s\S]*?(?=Klaar!)',text)
 
@@ -143,12 +143,23 @@ for file in files_list:
     #for text in teksten:
         #print(f"{len(text)}")
 
+    if len(titel) > 0:
+        titels.append(titel[0])
+    else:
+        titels.append("")
 
-    titels.append(titel[0])
-    teksten.append(tekst[0])
-    namen.append(naam[0])
+    if len(tekst) > 0:
+        teksten.append(tekst[0])
+    else:
+        teksten.append("")
+
+    if len(naam) > 0:
+        namen.append(naam[0])
+    else:
+        namen.append("")
+
     if len(image) > 0:
-        images.append(image[0])
+        images.append(image)
     else:
         images.append("")
 
