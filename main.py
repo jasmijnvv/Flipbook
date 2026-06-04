@@ -112,7 +112,7 @@ def extract_images(file_name: Path):
     return image_paths
 
 files_list = []
-directory = Path(r"C:\Users\Jasmijn\Documents\A1C")
+directory = Path(r"C:\Users\Jasmijn\Documents\AM1B")
 for file_path in directory.iterdir():
      if file_path.is_file():
         files_list.append(file_path.resolve())
